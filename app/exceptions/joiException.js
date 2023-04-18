@@ -1,8 +1,9 @@
 // Execption when user not found
+
 /**
  * @extends Error
  */
-class DataNotFound extends Error {
+class JoiException extends Error {
   /**
    * @param  {string} message
    */
@@ -10,15 +11,15 @@ class DataNotFound extends Error {
     super(message);
 
     this.name = this.constructor.name;
-    this.status = 404;
-    this.message = message || 'Data not found!';
+    this.status = 406;
+    this.message = message.details.map((item)=> item.message) || [];
   }
   /**
    * Custom action when error happen
    */
   handle() {
-    // console.log('Use custom action here..');
+    // this.message = this.message.map((item)=>item.message);
   }
 }
 
-module.exports = DataNotFound;
+module.exports = JoiException;

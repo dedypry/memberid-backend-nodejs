@@ -12,7 +12,12 @@ async function login(req, res) {
   return SuccessResult.make(res).sendMessageData(data, INSERT);
 }
 
+async function getUser(req, res) {
+  return SuccessResult.make(res).send(req.user);
+}
+
 module.exports = {
   signUp,
   login,
+  getUser,
 };

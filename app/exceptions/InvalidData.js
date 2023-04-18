@@ -9,7 +9,7 @@ class InvalidData extends Error {
     super(message);
 
     this.name = this.constructor.name;
-    this.code = 422;
+    this.status = 422;
     this.message = 'Invalid Input Data! ' + message? message: '';
   }
 
