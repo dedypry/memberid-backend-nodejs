@@ -22,6 +22,7 @@ async function signupValidation(req, res, next) {
     email: Joi.string().email().required(),
     password: Joi.string().required(),
     name: Joi.string().required(),
+    roleId: Joi.string().optional(),
   });
 
   const {error} = schema.validate(req.body, {

@@ -1,6 +1,7 @@
 const {Model} = require('objection');
 const knex = require('./knex');
 const objectionSoftDelete = require('objection-js-soft-delete');
+const ModuleModel = require('./module');
 // const userRoleModel = require('./userRole');
 
 Model.knex(knex);
@@ -56,7 +57,26 @@ class Role extends softDelete(Model) {
    * @return {Object}
    */
   static relationMappings() {
-    return {};
+    return {
+      modules: {
+        relation: Model.ManyToManyRelation,
+        modelClass: ModuleModel,
+        join: {
+          from: 'roles.id',
+          through: {
+            from: 'role_module.role_id',
+            to: 'role_module.module_id',
+            extra: {
+              create: 'create',
+              read: 'read',
+              update: 'update',
+              delete: 'delete',
+            },
+          },
+          to: 'modules.id',
+        },
+      },
+    };
   }
 }
 
