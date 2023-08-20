@@ -25,16 +25,6 @@ class SuccessResult {
     }
   }
 
-
-  static sendMessage(message) {
-    return this.res.status(200).send(
-        {
-          message: message,
-        },
-    );
-  }
-
-
   static sendMessageData(data, message, other) {
     return this.res.status(200).send(
         {
@@ -43,11 +33,6 @@ class SuccessResult {
           ...other,
         },
     );
-  }
-
-  static sendDownload(path, fileName) {
-    if (fileName) return this.res.download(path, fileName);
-    return this.res.download(path, fileName);
   }
 }
 

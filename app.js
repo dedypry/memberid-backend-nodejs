@@ -52,9 +52,8 @@ app.use(function(err, req, res, next) {
   }
 
   // render the error page
-  res.status(err.status || 500).json({
-    code: err.status || err.code || 500,
-    message: err.message || 'Something went wrong!',
+  res.status(err.status || err.code || 500).json({
+    message: err.msg || 'Something went wrong!',
   });
 });
 

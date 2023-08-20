@@ -11,7 +11,7 @@ class DataNotFound extends Error {
 
     this.name = this.constructor.name;
     this.status = 404;
-    this.message = message || 'Data not found!';
+    this.msg = message || 'Data not found!';
   }
   /**
    * Custom action when error happen

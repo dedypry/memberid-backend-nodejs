@@ -14,7 +14,7 @@ function getToken(req) {
   return decodeToken(token);
 }
 
-function auth(roles, menu) {
+function auth() {
   return (req, res, next) => {
     try {
       req.user = getToken(req);
