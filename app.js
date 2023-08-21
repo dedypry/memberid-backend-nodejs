@@ -53,7 +53,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || err.code || 500).json({
-    message: err.msg || 'Something went wrong!',
+    message: err.message || 'Something went wrong!',
   });
 });
 
