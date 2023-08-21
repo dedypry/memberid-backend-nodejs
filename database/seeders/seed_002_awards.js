@@ -4,9 +4,9 @@ exports.seed = async function(knex) {
   const array = ['VOUCHER', 'PRODUCT', 'GIFTCARD'];
   const array2 = ['Gift Card', 'Old Fashion Cake'];
   const images = [
-    'https://hips.hearstapps.com/hmg-prod/images/best-gift-cards-2021-1637270343.jpg?crop=0.771xw:1.00xh;0.115xw,0&resize=980:*',
-    'https://www.niemanlab.org/images/Viktoriaa-Liutova-e1624366176190.png',
-    'https://www.photojaanic.sg/blog/wp-content/uploads/sites/3/2020/04/image2-1080x720.jpg',
+    'https://firebasestorage.googleapis.com/v0/b/member-id-7d308.appspot.com/o/img33%20(2).png?alt=media&token=766ee35b-6185-4da7-84d1-e83be9887eb6',
+    'https://firebasestorage.googleapis.com/v0/b/member-id-7d308.appspot.com/o/img2%20(2).jpeg?alt=media&token=f1e5a756-5c9e-48b1-8eaf-9fca6a316820',
+    'https://firebasestorage.googleapis.com/v0/b/member-id-7d308.appspot.com/o/image1-2.jpeg?alt=media&token=35b2cf90-a853-4010-a3ee-8aee438b2be0',
   ];
   const numberOfIterations = 100;
   const minRange = 10000;
