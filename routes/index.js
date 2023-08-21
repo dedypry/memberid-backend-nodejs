@@ -8,9 +8,6 @@ const {handlerException} = require('../app/exceptions/handler');
 const {loginValidation} = require('../app/validations/authValidation');
 const {auth} = require('../app/http/middleware/auth');
 
-routes.get('/', function(res, req) {
-  res.send('oke');
-});
 
 /* GET home page. */
 routes.group('/api', (router)=> {
